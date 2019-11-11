@@ -8,14 +8,14 @@ import android.widget.Toast;
 
 import com.example.recyclerPresident.R;
 
-public class SpinnerDisplayActivity extends AppCompatActivity {
+public class DisplaySpinnerActivity extends AppCompatActivity {
 
     TextView tvName,tvNationality,tvPhone,tvEmail,tvAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spinner_display);
+        setContentView(R.layout.activity_display_spinner);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         tvName = findViewById(R.id.yName);

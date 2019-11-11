@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.example.recyclerPresident.R;
 
-public class SpinnerFormActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class FormActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText etName,etNationality,etEmail,etPhone;
     Spinner spinner;
@@ -24,7 +24,7 @@ public class SpinnerFormActivity extends AppCompatActivity implements AdapterVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spinner_form);
+        setContentView(R.layout.activity_form_spinner);
 
         final Spinner spinner = findViewById(R.id.spinnerAddress);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.address,android.R.layout.simple_spinner_item);
@@ -45,7 +45,25 @@ public class SpinnerFormActivity extends AppCompatActivity implements AdapterVie
 
                 address = spinner.getSelectedItem().toString();
 
-                Intent intentForm = new Intent(SpinnerFormActivity.this, SpinnerDisplayActivity.class);
+                if(name.isEmpty()){
+                    etName.setError("Enter Name");
+                    return;
+                }
+                if(nationality.isEmpty()){
+                    etNationality.setError("Enter Nationality");
+                    return;
+                }
+                if(phone.isEmpty()){
+                    etPhone.setError("Enter Phone num");
+                    return;
+                }
+                if(email.isEmpty()){
+                    etEmail.setError("Enter Email");
+                    return;
+                }
+
+
+                Intent intentForm = new Intent(FormActivity.this, DisplaySpinnerActivity.class);
                 intentForm.putExtra("forName", name);
                 intentForm.putExtra("forNationality",nationality);
                 intentForm.putExtra("forPhone", phone);

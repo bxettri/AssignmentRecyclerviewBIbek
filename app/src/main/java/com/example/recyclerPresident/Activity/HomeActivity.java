@@ -10,14 +10,14 @@ import android.widget.Button;
 import com.example.recyclerPresident.MainActivity;
 import com.example.recyclerPresident.R;
 
-public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btn1,btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_home);
 
         btn1= findViewById(R.id.btnPresidents);
         btn2= findViewById(R.id.btnForm);
@@ -33,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(this, SpinnerFormActivity.class);
+            Intent intent = new Intent(this, FormActivity.class);
             startActivity(intent);
         }
 

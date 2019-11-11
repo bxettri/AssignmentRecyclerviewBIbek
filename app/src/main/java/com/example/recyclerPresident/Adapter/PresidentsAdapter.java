@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recyclerPresident.Activity.DetailsActivity;
+import com.example.recyclerPresident.Activity.PresidentDetailsActivity;
 import com.example.recyclerPresident.model.Presidents;
 import com.example.recyclerPresident.R;
 
@@ -30,7 +30,7 @@ public class PresidentsAdapter extends RecyclerView.Adapter<PresidentsAdapter.Pr
     @NonNull
     @Override
     public PresidentsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.president,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_presidents,parent,false);
         return new PresidentsViewHolder(view);
     }
 
@@ -44,7 +44,7 @@ public class PresidentsAdapter extends RecyclerView.Adapter<PresidentsAdapter.Pr
         holder.imgProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, DetailsActivity.class);
+                Intent intent = new Intent(mContext, PresidentDetailsActivity.class);
 
                 intent.putExtra("image",presidents.getImage());
                 intent.putExtra("name",presidents.getName());

@@ -10,7 +10,7 @@ import com.example.recyclerPresident.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DetailsActivity extends AppCompatActivity {
+public class PresidentDetailsActivity extends AppCompatActivity {
      TextView fullName, about;
      CircleImageView imgProfile;
 

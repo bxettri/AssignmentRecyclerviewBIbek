@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.recyclerPresident.Activity.SpinnerDisplayActivity"></activity>
-        <activity android:name="com.example.recyclerPresident.Activity.SpinnerFormActivity" />
-        <activity android:name="com.example.recyclerPresident.Activity.DashboardActivity">
+        <activity android:name="com.example.recyclerPresident.Activity.DisplaySpinnerActivity"></activity>
+        <activity android:name="com.example.recyclerPresident.Activity.FormActivity" />
+        <activity android:name="com.example.recyclerPresident.Activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.recyclerPresident.Activity.DetailsActivity"
+            android:name="com.example.recyclerPresident.Activity.PresidentDetailsActivity"
             android:parentActivityName="com.example.recyclerPresident.MainActivity" />
         <activity android:name="com.example.recyclerPresident.MainActivity"></activity>
     </application>

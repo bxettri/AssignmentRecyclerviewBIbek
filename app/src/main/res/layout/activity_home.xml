@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activity.DashboardActivity"
     android:layout_margin="10dp"
-    >
+    android:background="#00D16060"
+    android:orientation="vertical"
+    tools:context=".Activity.HomeActivity">
 
     <Button
         android:id="@+id/btnPresidents"
         android:layout_width="match_parent"
         android:layout_height="129dp"
         android:layout_marginTop="25dp"
-        android:text="President of USA">
+        android:text="President of USA"
+        android:textColor="#673AB7"
+        android:textSize="24sp">
 
     </Button>
 
@@ -23,7 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="132dp"
         android:layout_marginTop="25dp"
-        android:text="Fill form">
+        android:text="Fill form"
+        android:textColor="#9C27B0"
+        android:textSize="24sp">
 
     </Button>
 
